@@ -51,4 +51,53 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
-```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Pet Shop Admin Panel
+
+პროექტი მოიცავს React Admin Panel-ს შინაური ცხოველების კატეგორიებისა და სიების სამართავად.
+
+---
+ ტექნოლოგიები
+
+- React + Vite
+- TypeScript
+- Redux Toolkit / Redux Thunk
+- Styled-components
+- json-server (Mock Backend)
+- CSS Modules / Styled UI
+
+---
+
+## ინსტალაცია და გაშვება
+
+bash
+# 1. დაკლონე პროექტი
+git clone <რეპოს_ბმული>
+cd pet-shop-admin
+
+# 2. დააინსტალე ყველა პაკეტი
+npm install
+
+# 3. აუცილებელი dev პაკეტების ინსტალაცაია (ერთხელ)
+npm install redux react-redux @reduxjs/toolkit redux-thunk styled-components
+npm install json-server concurrently --save-dev
+npm install --save-dev @types/react-router-dom
+
+# ⬅️ json-server გაშვება (Mock Backend)
+npm run dev-server
+
+# ➡️ სხვა ტერმინალში frontend
+npm run dev  
+
+ან ორივეს ერთად გაშვება >>   npm run start
+
+
+json >>> "scripts": {
+  "dev": "vite",
+  "dev-server": "json-server db.json --port 5001",
+  "start": "concurrently \"npm run dev-server\" \"npm run dev\""
+}
+
+
+სერვერი>>>> http://localhost:5001
