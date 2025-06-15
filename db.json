@@ -1,0 +1,211 @@
+{
+  "animals": [
+    {
+      "id": "d0aa",
+      "data": [
+        {
+          "name": "მაქსი",
+          "priceUSD": 34,
+          "priceGEL": 34,
+          "description": "დსფსდფ",
+          "isPopular": true,
+          "stock": 34,
+          "categoryId": "d218",
+          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
+          "category": "ძაღლი"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "5947",
+      "data": [
+        {
+          "title": "sVRSV EWF",
+          "description": "WVERWEFW"
+        }
+      ]
+    },
+    {
+      "id": "ff1f",
+      "data": [
+        {
+          "title": "VWERWRV",
+          "description": "WRVWRWREW"
+        }
+      ]
+    },
+    {
+      "id": "3712",
+      "data": [
+        {
+          "title": "DFVRGVER",
+          "description": "GFERGERG"
+        }
+      ]
+    },
+    {
+      "id": "e3b6",
+      "data": [
+        {
+          "title": "ERGERGER",
+          "description": "ERGERG"
+        }
+      ]
+    },
+    {
+      "id": "b104",
+      "data": [
+        {
+          "title": "GERGERG",
+          "description": "ERGERG"
+        }
+      ]
+    },
+    {
+      "id": "a824",
+      "data": [
+        {
+          "title": "ERGERG",
+          "description": "ERGERG"
+        }
+      ]
+    },
+    {
+      "id": "e43f",
+      "data": [
+        {
+          "title": "ERGERG",
+          "description": "ERGERG"
+        }
+      ]
+    },
+    {
+      "id": "d218",
+      "data": [
+        {
+          "title": "ძაღლი",
+          "description": "მეგობრული"
+        }
+      ]
+    }
+  ],
+  "animals_with_categories": [
+    {
+      "id": "e2ee",
+      "animal_id": "1df3",
+      "category_id": "c801"
+    },
+    {
+      "id": "f0fd",
+      "animal_id": "0999",
+      "category_id": "c801"
+    },
+    {
+      "id": "ee3f",
+      "animal_id": "b4d2",
+      "category_id": 0
+    },
+    {
+      "id": "6d54",
+      "animal_id": "a890",
+      "category_id": "6de6"
+    },
+    {
+      "id": "bd08",
+      "animal_id": "c7bc",
+      "category_id": 0
+    },
+    {
+      "id": "57d3",
+      "animal_id": "52ed",
+      "category_id": 0
+    },
+    {
+      "id": "f7fe",
+      "animal_id": "0786",
+      "category_id": 0
+    },
+    {
+      "id": "9398",
+      "animal_id": "7325",
+      "category_id": 0
+    },
+    {
+      "id": "4c83",
+      "animal_id": "de65",
+      "category_id": 0
+    },
+    {
+      "id": "823c",
+      "animal_id": "0c79",
+      "category_id": "ff1f"
+    },
+    {
+      "id": "4a9a",
+      "animal_id": "9253",
+      "category_id": "e3b6"
+    },
+    {
+      "id": "8670",
+      "animal_id": "23e7",
+      "category_id": "5947"
+    },
+    {
+      "id": "e51f",
+      "animal_id": "a73e",
+      "category_id": "d218"
+    },
+    {
+      "id": "c824",
+      "animal_id": "13d8",
+      "category_id": "d218"
+    },
+    {
+      "id": "bb13",
+      "animal_id": "9c9c",
+      "category_id": "d218"
+    },
+    {
+      "id": "5985",
+      "animal_id": "6f6c",
+      "category_id": "d218"
+    },
+    {
+      "id": "3dcb",
+      "animal_id": "b5f5",
+      "category_id": "ff1f"
+    },
+    {
+      "id": "e8f1",
+      "animal_id": "a30b",
+      "category_id": "d218"
+    },
+    {
+      "id": "7cc2",
+      "animal_id": "d19a",
+      "category_id": "d218"
+    },
+    {
+      "id": "03d9",
+      "animal_id": "9284",
+      "category_id": "d218"
+    },
+    {
+      "id": "ea46",
+      "animal_id": "f4de",
+      "category_id": 0
+    },
+    {
+      "id": "5763",
+      "animal_id": "3777",
+      "category_id": "d218"
+    },
+    {
+      "id": "8eb3",
+      "animal_id": "d0aa",
+      "category_id": "d218"
+    }
+  ]
+}
