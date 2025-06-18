@@ -1,94 +1,82 @@
 {
   "animals": [
     {
-      "id": "d0aa",
       "data": [
         {
-          "name": "მაქსი",
-          "priceUSD": 34,
-          "priceGEL": 34,
-          "description": "დსფსდფ",
-          "isPopular": true,
-          "stock": 34,
-          "categoryId": "d218",
-          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
+          "name": "cascas",
+          "priceUSD": 0,
+          "priceGEL": 0,
+          "description": "",
+          "isPopular": false,
+          "stock": 0,
+          "categoryId": "c99b",
+          "imageUrl": "https://www.picture.com",
+          "id": "c5b1",
           "category": "ძაღლი"
         }
-      ]
+      ],
+      "id": "c5b1"
+    },
+    {
+      "data": [
+        {
+          "name": "ჰუოუ8ო",
+          "priceUSD": 1,
+          "priceGEL": 2.73,
+          "description": "",
+          "isPopular": true,
+          "stock": 0,
+          "categoryId": "3805",
+          "imageUrl": "",
+          "id": "e468",
+          "category": "ჰაიხვხდვ"
+        }
+      ],
+      "id": "e468"
+    },
+    {
+      "data": [
+        {
+          "name": "წეწფეწფ",
+          "priceUSD": 36.66,
+          "priceGEL": 100,
+          "description": "ძალიან მაგარი და საყვარელი ძაღლი",
+          "isPopular": true,
+          "stock": 4,
+          "categoryId": "c99b",
+          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
+          "id": "935d",
+          "category": "ძაღლი"
+        }
+      ],
+      "id": "935d"
     }
   ],
   "categories": [
     {
-      "id": "5947",
-      "data": [
-        {
-          "title": "sVRSV EWF",
-          "description": "WVERWEFW"
-        }
-      ]
+      "title": "ჰაიხვხდვ",
+      "description": "გლჰლჰულ",
+      "id": "3805"
     },
     {
-      "id": "ff1f",
-      "data": [
-        {
-          "title": "VWERWRV",
-          "description": "WRVWRWREW"
-        }
-      ]
+      "title": "გამარჯობა",
+      "description": "ჰაიიხხგდხგ",
+      "id": "6297"
     },
     {
-      "id": "3712",
-      "data": [
-        {
-          "title": "DFVRGVER",
-          "description": "GFERGERG"
-        }
-      ]
+      "title": "ძაღლი",
+      "description": "მეგობრული ძააან დსფსფე\n",
+      "id": "c99b"
     },
     {
-      "id": "e3b6",
-      "data": [
-        {
-          "title": "ERGERGER",
-          "description": "ERGERG"
-        }
-      ]
+      "title": "გაუmarjos",
+      "description": "მარგოს",
+      "id": "65a4"
     },
     {
-      "id": "b104",
-      "data": [
-        {
-          "title": "GERGERG",
-          "description": "ERGERG"
-        }
-      ]
-    },
-    {
-      "id": "a824",
-      "data": [
-        {
-          "title": "ERGERG",
-          "description": "ERGERG"
-        }
-      ]
-    },
-    {
-      "id": "e43f",
-      "data": [
-        {
-          "title": "ERGERG",
-          "description": "ERGERG"
-        }
-      ]
-    },
-    {
-      "id": "d218",
-      "data": [
-        {
-          "title": "ძაღლი",
-          "description": "მეგობრული"
-        }
-      ]
+      "id": "e0de",
+      "title": "წეფწეფ",
+      "description": "წეფწეფ"
     }
   ],
   "animals_with_categories": [
@@ -206,6 +194,56 @@
       "id": "8eb3",
       "animal_id": "d0aa",
       "category_id": "d218"
+    },
+    {
+      "id": "f529",
+      "animal_id": "a539",
+      "category_id": "d218"
+    },
+    {
+      "id": "3997",
+      "animal_id": "aa35",
+      "category_id": 0
+    },
+    {
+      "id": "3833",
+      "animal_id": "8ce8",
+      "category_id": "c99b"
+    },
+    {
+      "id": "3eaf",
+      "animal_id": "7652",
+      "category_id": "c99b"
+    },
+    {
+      "id": "3231",
+      "animal_id": "b9de",
+      "category_id": "c99b"
+    },
+    {
+      "id": "a87f",
+      "animal_id": "c5b1",
+      "category_id": "c99b"
+    },
+    {
+      "id": "8608",
+      "animal_id": "e468",
+      "category_id": "c99b"
+    },
+    {
+      "id": "6265",
+      "animal_id": "8e52",
+      "category_id": "3805"
+    },
+    {
+      "id": "c428",
+      "animal_id": "935d",
+      "category_id": "c99b"
+    },
+    {
+      "id": "e5de",
+      "animal_id": "9098",
+      "category_id": "6297"
     }
   ]
 }

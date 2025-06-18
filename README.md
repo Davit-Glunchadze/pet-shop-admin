@@ -84,20 +84,13 @@ npm install redux react-redux @reduxjs/toolkit redux-thunk styled-components
 npm install json-server concurrently --save-dev
 npm install --save-dev @types/react-router-dom
 
-# ⬅️ json-server გაშვება (Mock Backend)
+
+
+# ⬅️ json-server გაშვება (global)
+npm install -g json-server
 npm run dev-server
 
 # ➡️ სხვა ტერმინალში frontend
 npm run dev  
-
-ან ორივეს ერთად გაშვება >>   npm run start
-
-
-json >>> "scripts": {
-  "dev": "vite",
-  "dev-server": "json-server db.json --port 5001",
-  "start": "concurrently \"npm run dev-server\" \"npm run dev\""
-}
-
 
 სერვერი>>>> http://localhost:5001

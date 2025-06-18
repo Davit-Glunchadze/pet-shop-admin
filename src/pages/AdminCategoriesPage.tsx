@@ -25,7 +25,8 @@ const AdminCategoriesPage: React.FC = () => {
   const { categories, loading, error } = useAppSelector(
     (state) => state.category
   );
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
@@ -34,38 +35,36 @@ const AdminCategoriesPage: React.FC = () => {
     <PageContainer>
       <Header>
         <Title>All Categories</Title>
-        <AddButton onClick={() => Navigate(`/add-category/`)}>➕ Add New Category</AddButton>
+        <AddButton onClick={() => navigate(`/add-category/`)}>
+          ➕ Add New Category
+        </AddButton>
       </Header>
 
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <Grid>
-        {categories.map((category, index) => {
-          const normal = category.data?.[0] ?? category;
-
-          return (
-            <Card key={category.id || index}>
-              <CategoryName>{normal.title || "No title"}</CategoryName>
-              <Description>
-                {normal.description || "No description"}
-              </Description>
-              <Meta>1 pet</Meta>
-              <ButtonGroup>
-                <EditButton
-                  onClick={() => Navigate(`/add-category/${category.id}`)}
-                >
-                  Edit
-                </EditButton>
-                <DeleteButton
-                  onClick={() => dispatch(deleteCategory(category.id))}
-                >
-                  Delete
-                </DeleteButton>
-              </ButtonGroup>
-            </Card>
-          );
-        })}
+        {categories.map((category) => (
+          <Card key={category.id}>
+            <CategoryName>{category.title || "No title"}</CategoryName>
+            <Description>
+              {category.description || "No description"}
+            </Description>
+            <Meta>1 pet</Meta>
+            <ButtonGroup>
+              <EditButton
+                onClick={() => navigate(`/add-category/${category.id}`)}
+              >
+                Edit
+              </EditButton>
+              <DeleteButton
+                onClick={() => dispatch(deleteCategory(category.id))}
+              >
+                Delete
+              </DeleteButton>
+            </ButtonGroup>
+          </Card>
+        ))}
       </Grid>
     </PageContainer>
   );

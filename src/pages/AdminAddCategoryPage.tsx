@@ -14,10 +14,11 @@ import {
   CancelButton,
 } from "../components/styles/AdminAddCategoryPage.styled";
 
+
 const AdminAddCategoryPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { id } = useParams<Record<string, string>>();
   const isEditMode = Boolean(id);
 
   const { categories } = useAppSelector((state) => state.category);
@@ -28,22 +29,17 @@ const AdminAddCategoryPage: React.FC = () => {
   });
 
   useEffect(() => {
-    if (isEditMode) {
-      const existingCategory = id
-        ? categories.find((c) => c.id === Number(id))
-        : undefined;
-      const data = (existingCategory?.data?.[0] ?? existingCategory) as {
-        title?: string;
-        description?: string;
-      };
-      if (data) {
+    if (isEditMode && id) {
+      const existingCategory = categories.find((c) => c.id === id);
+      if (existingCategory) {
         setFormData({
-          title: data.title || "",
-          description: data.description || "",
+          title: existingCategory.title,
+          description: existingCategory.description,
         });
       }
     }
   }, [id, categories]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -55,7 +51,8 @@ const AdminAddCategoryPage: React.FC = () => {
     e.preventDefault();
     try {
       if (isEditMode && id) {
-        await dispatch(updateCategory({ id: Number(id), updatedData: formData })).unwrap();
+        console.log("Updating with ID:", id);
+        await dispatch(updateCategory({ id, updatedData: formData })).unwrap(); 
       } else {
         await dispatch(addCategory(formData)).unwrap();
       }

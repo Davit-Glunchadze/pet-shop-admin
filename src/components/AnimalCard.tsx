@@ -9,19 +9,34 @@ import {
   Tag,
   MetaRow,
   ButtonGroup,
-  Button
+  Button,
 } from "./styles/AnimalCard.styled";
 import type { AnimalItem } from "../interfaces/Animal";
 
 interface Props {
   animal: AnimalItem;
-  onEdit: (id: number) => void;
-  onDelete: (id: number) => void;
+  onEdit: (id: string) => void;
+  onDelete: (id: string) => void;
+  onView: (id: string) => void;
 }
 
-const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete }) => {
+const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete, onView }) => {
+  const handleEdit = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (animal.id) {
+      onEdit(animal.id);
+    }
+  };
+
+  const handleDelete = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (animal.id) {
+      onDelete(animal.id);
+    }
+  };
+
   return (
-    <Card>
+    <Card onClick={() => onView(animal.id)} style={{ cursor: "pointer" }}>
       <ImageWrapper>
         {animal.imageUrl ? (
           <img src={animal.imageUrl} alt={animal.name} />
@@ -39,9 +54,9 @@ const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete }) => {
       </PriceRow>
 
       <Description>
-        {animal.description.length > 120
+        {animal.description?.length > 120
           ? `${animal.description.slice(0, 120)}...`
-          : animal.description}
+          : animal.description || "No description"}
       </Description>
 
       <MetaRow>
@@ -52,8 +67,10 @@ const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete }) => {
       </MetaRow>
 
       <ButtonGroup>
-        <Button onClick={() => onEdit(animal.id)}>Edit</Button>
-        <Button $danger onClick={() => onDelete(animal.id)}>Delete</Button>
+        <Button onClick={handleEdit}>Edit</Button>
+        <Button $danger onClick={handleDelete}>
+          Delete
+        </Button>
       </ButtonGroup>
     </Card>
   );

@@ -38,8 +38,9 @@ const AdminPetsPage = () => {
           <AnimalCard
             key={animal.id}
             animal={animal}
-            onEdit={(id) => navigate(`/edit/${id}`)}
+            onEdit={(id) => navigate(`/add-pet/${id}`)}
             onDelete={(id) => dispatch(deleteAnimal(id))}
+            onView={(id) => navigate(`/pets/${id}`)}
           />
         ))}
       </Animalcards>
