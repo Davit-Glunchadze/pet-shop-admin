@@ -1,4 +1,3 @@
-// AnimalCard.styled.ts
 import styled from "styled-components";
 
 export const Card = styled.div`
@@ -19,11 +18,12 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 160px;
+  width: 100%;
   margin-bottom: 16px;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
   }
 `;
@@ -41,8 +41,10 @@ export const Badge = styled.span`
   font-size: 12px;
   border-radius: 20px;
   display: inline-block;
-  margin-bottom: 10px;
+  width: fit-content;
+  margin: 10px 0 10px;
 `;
+
 
 export const PriceRow = styled.div`
   display: flex;

@@ -1,25 +1,18 @@
-
-// ცალკე ერთი ტიპი კატეგორიისთვის
-export interface CategoryItem {
-  id: number;
-  data: {
-    title: string;
-    description: string;
-  }[];
+export interface Category {
+  id: string;
+  title: string;
+  description: string;
 }
 
-// კატეგორიის მდგომარეობის ტიპი
+// სტეიტის ტიპი
 export interface CategoryState {
-  categories: CategoryItem[];
+  categories: Category[];
   loading: boolean;
   error: string | null;
 }
 
-
-
-//ახალი კატეგორიის ტიპი
+// კატეგორიის შესაქმნელი ფორმის ტიპი
 export interface newCategory {
-  id?: number;
   title: string;
   description: string;
 }

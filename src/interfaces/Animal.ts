@@ -1,17 +1,19 @@
+//
 export interface AnimalItem {
-  id: number;
+  id: string;
   name: string;
   priceUSD: number;
   priceGEL: number;
   description: string;
   isPopular: boolean;
   stock: number;
-  imageUrl?: string;
+  imageUrl: string;
   category: string;
-  categoryId?: number;
-  imageUrls?: string[];
+  categoryId: string;
+ 
 }
 
+//სტეიტის ტიპი
 export interface animalState {
   animals: AnimalItem[];
   loading: boolean;

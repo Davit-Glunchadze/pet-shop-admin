@@ -5,11 +5,11 @@ import type { AnimalItem, animalState } from "../../interfaces/Animal";
 // const API_KEY = import.meta.env.VITE_API_KEY;
 
 const API_URL = "http://localhost:5001";
-const API_KEY_SECRET = "YXBpS2V5U2VjcmV0"
+// const API_KEY_SECRET = "YXBpS2V5U2VjcmV0"
 
 const HEADERS = {
   "Content-Type": "application/json",
-  "x-bypass-token": API_KEY_SECRET,
+  // "x-bypass-token": API_KEY_SECRET,
 };
 
 const initialState: animalState = {
@@ -19,7 +19,7 @@ const initialState: animalState = {
 };
 
 
-// 🔁 Fetch all animals
+// Fetch all animals
 export const fetchAnimals = createAsyncThunk<AnimalItem[]>(
   "animals/fetchAnimals",
   async () => {
@@ -39,8 +39,8 @@ export const fetchAnimals = createAsyncThunk<AnimalItem[]>(
   }
 );
 
-// ❌ Delete animal
-export const deleteAnimal = createAsyncThunk<number, number>(
+// Delete animal
+export const deleteAnimal = createAsyncThunk<string, string>(
   "animals/deleteAnimal",
   async (id) => {
     const response = await fetch(`${API_URL}/animals/${id}`, {
@@ -52,7 +52,7 @@ export const deleteAnimal = createAsyncThunk<number, number>(
   }
 );
 
-// ♻️ Update animal
+// Update animal
 export const updateAnimal = createAsyncThunk<AnimalItem, AnimalItem>(
   "animals/updateAnimal",
   async (animal) => {
@@ -66,7 +66,7 @@ export const updateAnimal = createAsyncThunk<AnimalItem, AnimalItem>(
   }
 );
 
-// ➕ Add animal
+// Add animal
 export const addAnimal = createAsyncThunk<AnimalItem, Omit<AnimalItem, "id">>(
   "animals/addAnimal",
   async (animalData) => {
@@ -88,10 +88,10 @@ export const addAnimal = createAsyncThunk<AnimalItem, Omit<AnimalItem, "id">>(
 );
 
 
-// 🔗 Link animal to category
+// Link animal to category
 export const linkAnimalToCategory = createAsyncThunk<
   any,
-  { animalId: number; categoryId: number }
+  { animalId: string; categoryId: string }
 >("animals/linkToCategory", async ({ animalId, categoryId }) => {
   const response = await fetch(`${API_URL}/animals_with_categories`, {
     method: "POST",
@@ -106,7 +106,7 @@ export const linkAnimalToCategory = createAsyncThunk<
   return await response.json();
 });
 
-// 🧠 Slice
+// Slice
 export const animalSlice = createSlice({
   name: "animal",
   initialState,
