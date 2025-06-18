@@ -12,7 +12,7 @@ export const Container = styled.div`
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 `;
 
 export const Smallcontainer = styled.div`
