@@ -51,6 +51,11 @@ export const Card = styled.div`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   width: 280px;
   margin-top: 20px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  }
 `;
 
 export const CategoryName = styled.h3`

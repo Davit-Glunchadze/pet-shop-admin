@@ -4,12 +4,19 @@ export const Card = styled.div`
   background-color: #fff;
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  }
 `;
+
 
 export const ImageWrapper = styled.div`
   background-color: #f2f6fb;

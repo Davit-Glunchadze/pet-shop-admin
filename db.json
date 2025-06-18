@@ -3,80 +3,149 @@
     {
       "data": [
         {
-          "name": "cascas",
-          "priceUSD": 0,
-          "priceGEL": 0,
-          "description": "",
-          "isPopular": false,
-          "stock": 0,
-          "categoryId": "c99b",
-          "imageUrl": "https://www.picture.com",
-          "id": "c5b1",
+          "name": "მაქსი",
+          "priceUSD": 200,
+          "priceGEL": 545.52,
+          "description": "ძალაინ საყვარელი და მეგობრული",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "da6c",
+          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
+          "id": "f94c",
           "category": "ძაღლი"
         }
       ],
-      "id": "c5b1"
+      "id": "f94c"
+    },
+    {
+      "id": "db3c",
+      "data": [
+        {
+          "name": "ჟაკო",
+          "priceUSD": 100,
+          "priceGEL": 272.76,
+          "description": "ენაჭარტალაა და ყეფავს",
+          "isPopular": true,
+          "stock": 3,
+          "categoryId": "e0de",
+          "imageUrl": "https://rogor.ge/media/_thumb/uploads/2022/05-23/parakeet12-1653310344.webp",
+          "category": "თუთიყუში"
+        }
+      ]
     },
     {
       "data": [
         {
-          "name": "ჰუოუ8ო",
+          "name": "ლამაზო",
+          "priceUSD": 250,
+          "priceGEL": 681.9,
+          "description": "საყვარელია, მაგრამ გაშრა მშობიარობის შემდეგ",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "65a4",
+          "imageUrl": "https://agrokavkaz.ge/wp-content/uploads/2016/03/monbeliard_jishi_526726724373782628_373892020202b_238292.jpg",
+          "id": "42f1",
+          "category": "ძროხა"
+        }
+      ],
+      "id": "42f1"
+    },
+    {
+      "id": "ec60",
+      "data": [
+        {
+          "name": "ქისო",
+          "priceUSD": 50,
+          "priceGEL": 136.38,
+          "description": "კაკანებს, მაგრამ კვერცხს არ დებს",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "3805",
+          "imageUrl": "https://chandler.on.ge/2024/04/30/ChickenFaceCloseUpFrontOnRedCrest.jpg",
+          "category": "ქათამი"
+        }
+      ]
+    },
+    {
+      "id": "5b6c",
+      "data": [
+        {
+          "name": "ფისო",
+          "priceUSD": 20,
+          "priceGEL": 54.55,
+          "description": "იფხაჭნებიან",
+          "isPopular": false,
+          "stock": 3,
+          "categoryId": "6297",
+          "imageUrl": "https://rogor.ge/media/articles/26__rogor-gadavachviot-kata-dakawvras.jpg",
+          "category": "კატა"
+        }
+      ]
+    },
+    {
+      "id": "594d",
+      "data": [
+        {
+          "name": "ჩუნგო",
+          "priceUSD": 1,
+          "priceGEL": 2.73,
+          "description": "ცოტა მოდებილოა",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "c99b",
+          "imageUrl": "https://cdnn1.img.sputnik-georgia.com/img/23400/45/234004523_0:27:1867:1083_2072x0_60_0_0_5bb99a5de07898672eb0dcd7d945b440.jpg",
+          "category": "ძაღლი"
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "name": "მაქსი",
           "priceUSD": 1,
           "priceGEL": 2.73,
           "description": "",
-          "isPopular": true,
-          "stock": 0,
-          "categoryId": "3805",
+          "isPopular": false,
+          "stock": 1,
+          "categoryId": "6297",
           "imageUrl": "",
-          "id": "e468",
-          "category": "ჰაიხვხდვ"
+          "id": "c884",
+          "category": "კატა"
         }
       ],
-      "id": "e468"
-    },
-    {
-      "data": [
-        {
-          "name": "წეწფეწფ",
-          "priceUSD": 36.66,
-          "priceGEL": 100,
-          "description": "ძალიან მაგარი და საყვარელი ძაღლი",
-          "isPopular": true,
-          "stock": 4,
-          "categoryId": "c99b",
-          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
-          "id": "935d",
-          "category": "ძაღლი"
-        }
-      ],
-      "id": "935d"
+      "id": "c884"
     }
   ],
   "categories": [
     {
-      "title": "ჰაიხვხდვ",
-      "description": "გლჰლჰულ",
+      "title": "ქათამი",
+      "description": "კვერცხს არ დებს",
       "id": "3805"
     },
     {
-      "title": "გამარჯობა",
-      "description": "ჰაიიხხგდხგ",
+      "title": "კატა",
+      "description": "იფხაჭნება და იყეფება",
       "id": "6297"
     },
     {
       "title": "ძაღლი",
-      "description": "მეგობრული ძააან დსფსფე\n",
+      "description": "ცოტა მოდებილოა\n",
       "id": "c99b"
     },
     {
-      "title": "გაუmarjos",
-      "description": "მარგოს",
+      "title": "ძროხა",
+      "description": "აღარ იწველება, გაშრა მშობიარობის შემდეგ",
       "id": "65a4"
     },
     {
-      "id": "e0de",
-      "title": "წეფწეფ",
-      "description": "წეფწეფ"
+      "title": "თუთიყუში",
+      "description": "ჭორიკანაა და ვერ დაფრინავს",
+      "id": "e0de"
+    },
+    {
+      "id": "da6c",
+      "title": "ძაღლი",
+      "description": "მეგობრული და საყვარელი"
     }
   ],
   "animals_with_categories": [
@@ -243,6 +312,51 @@
     {
       "id": "e5de",
       "animal_id": "9098",
+      "category_id": "6297"
+    },
+    {
+      "id": "770b",
+      "animal_id": "f94c",
+      "category_id": "da6c"
+    },
+    {
+      "id": "acf7",
+      "animal_id": "db3c",
+      "category_id": "e0de"
+    },
+    {
+      "id": "061c",
+      "animal_id": "42f1",
+      "category_id": "65a4"
+    },
+    {
+      "id": "7b82",
+      "animal_id": "ec60",
+      "category_id": "3805"
+    },
+    {
+      "id": "07d3",
+      "animal_id": "5b6c",
+      "category_id": "6297"
+    },
+    {
+      "id": "628b",
+      "animal_id": "594d",
+      "category_id": "c99b"
+    },
+    {
+      "id": "6087",
+      "animal_id": "951e",
+      "category_id": "6297"
+    },
+    {
+      "id": "63c0",
+      "animal_id": "8b22",
+      "category_id": "da6c"
+    },
+    {
+      "id": "336a",
+      "animal_id": "c884",
       "category_id": "6297"
     }
   ]
