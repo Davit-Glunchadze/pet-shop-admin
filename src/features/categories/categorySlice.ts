@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { Category, CategoryState } from "../../interfaces/Category";
 
 const API_URL = "http://localhost:5001";
+
 const HEADERS = {
   "Content-Type": "application/json",
 };
