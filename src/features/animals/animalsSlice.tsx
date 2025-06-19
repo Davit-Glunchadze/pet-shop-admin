@@ -1,15 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { AnimalItem, animalState } from "../../interfaces/Animal";
-
-// const API_URL = import.meta.env.VITE_API_URL;
-// const API_KEY = import.meta.env.VITE_API_KEY;
+import type {
+  AnimalItem,
+  animalState,
+  ApiResponseItem,
+  ArgumentType,
+  LinkResponseType,
+} from "../../interfaces/Animal";
 
 const API_URL = "http://localhost:5001";
-// const API_KEY_SECRET = "YXBpS2V5U2VjcmV0"
 
 const HEADERS = {
   "Content-Type": "application/json",
-  // "x-bypass-token": API_KEY_SECRET,
 };
 
 const initialState: animalState = {
@@ -17,7 +18,6 @@ const initialState: animalState = {
   loading: false,
   error: null,
 };
-
 
 // Fetch all animals
 export const fetchAnimals = createAsyncThunk<AnimalItem[]>(
@@ -30,9 +30,9 @@ export const fetchAnimals = createAsyncThunk<AnimalItem[]>(
 
     const raw = await response.json();
 
-    const normalized = raw.map((item: any) => ({
-      ...item.data?.[0],   // animal data
-      id: item.id          //უმაღლესი id
+    const normalized = raw.map((item: ApiResponseItem) => ({
+      ...item.data?.[0], // animal data
+      id: item.id, // აიდის მინიჭება
     }));
 
     return normalized;
@@ -82,16 +82,15 @@ export const addAnimal = createAsyncThunk<AnimalItem, Omit<AnimalItem, "id">>(
 
     return {
       ...result.data?.[0],
-      id: result.id, // იღებს უმაღლეს id-ს
+      id: result.id, // ანიჭებს ID
     };
   }
 );
 
-
 // Link animal to category
 export const linkAnimalToCategory = createAsyncThunk<
-  any,
-  { animalId: string; categoryId: string }
+  LinkResponseType,
+  ArgumentType
 >("animals/linkToCategory", async ({ animalId, categoryId }) => {
   const response = await fetch(`${API_URL}/animals_with_categories`, {
     method: "POST",
@@ -103,6 +102,7 @@ export const linkAnimalToCategory = createAsyncThunk<
   });
 
   if (!response.ok) throw new Error("Failed to link animal to category");
+
   return await response.json();
 });
 
@@ -138,5 +138,3 @@ export const animalSlice = createSlice({
     });
   },
 });
-
-

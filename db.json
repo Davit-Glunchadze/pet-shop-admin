@@ -102,15 +102,15 @@
       "data": [
         {
           "name": "მაქსი",
-          "priceUSD": 1,
-          "priceGEL": 2.73,
-          "description": "",
-          "isPopular": false,
-          "stock": 1,
-          "categoryId": "6297",
-          "imageUrl": "",
+          "priceUSD": 3,
+          "priceGEL": 8.18,
+          "description": "პატარაა და საყვარელი, მაგრამ იკბინება",
+          "isPopular": true,
+          "stock": 3,
+          "categoryId": "c99b",
+          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
           "id": "c884",
-          "category": "კატა"
+          "category": "ძაღლი"
         }
       ],
       "id": "c884"
@@ -119,7 +119,7 @@
   "categories": [
     {
       "title": "ქათამი",
-      "description": "კვერცხს არ დებს",
+      "description": "კვერცხს არ დებს ცოცხალი თავით",
       "id": "3805"
     },
     {
