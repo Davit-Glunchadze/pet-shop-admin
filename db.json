@@ -1,0 +1,363 @@
+{
+  "animals": [
+    {
+      "data": [
+        {
+          "name": "მაქსი",
+          "priceUSD": 200,
+          "priceGEL": 545.52,
+          "description": "ძალაინ საყვარელი და მეგობრული",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "da6c",
+          "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
+          "id": "f94c",
+          "category": "ძაღლი"
+        }
+      ],
+      "id": "f94c"
+    },
+    {
+      "id": "db3c",
+      "data": [
+        {
+          "name": "ჟაკო",
+          "priceUSD": 100,
+          "priceGEL": 272.76,
+          "description": "ენაჭარტალაა და ყეფავს",
+          "isPopular": true,
+          "stock": 3,
+          "categoryId": "e0de",
+          "imageUrl": "https://rogor.ge/media/_thumb/uploads/2022/05-23/parakeet12-1653310344.webp",
+          "category": "თუთიყუში"
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "name": "ლამაზო",
+          "priceUSD": 250,
+          "priceGEL": 681.9,
+          "description": "საყვარელია, მაგრამ გაშრა მშობიარობის შემდეგ",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "65a4",
+          "imageUrl": "https://agrokavkaz.ge/wp-content/uploads/2016/03/monbeliard_jishi_526726724373782628_373892020202b_238292.jpg",
+          "id": "42f1",
+          "category": "ძროხა"
+        }
+      ],
+      "id": "42f1"
+    },
+    {
+      "id": "ec60",
+      "data": [
+        {
+          "name": "ქისო",
+          "priceUSD": 50,
+          "priceGEL": 136.38,
+          "description": "კაკანებს, მაგრამ კვერცხს არ დებს",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "3805",
+          "imageUrl": "https://chandler.on.ge/2024/04/30/ChickenFaceCloseUpFrontOnRedCrest.jpg",
+          "category": "ქათამი"
+        }
+      ]
+    },
+    {
+      "id": "5b6c",
+      "data": [
+        {
+          "name": "ფისო",
+          "priceUSD": 20,
+          "priceGEL": 54.55,
+          "description": "იფხაჭნებიან",
+          "isPopular": false,
+          "stock": 3,
+          "categoryId": "6297",
+          "imageUrl": "https://rogor.ge/media/articles/26__rogor-gadavachviot-kata-dakawvras.jpg",
+          "category": "კატა"
+        }
+      ]
+    },
+    {
+      "id": "594d",
+      "data": [
+        {
+          "name": "ჩუნგო",
+          "priceUSD": 1,
+          "priceGEL": 2.73,
+          "description": "ცოტა მოდებილოა",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "c99b",
+          "imageUrl": "https://cdnn1.img.sputnik-georgia.com/img/23400/45/234004523_0:27:1867:1083_2072x0_60_0_0_5bb99a5de07898672eb0dcd7d945b440.jpg",
+          "category": "ძაღლი"
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "name": "მაქსი",
+          "priceUSD": 1,
+          "priceGEL": 2.73,
+          "description": "",
+          "isPopular": false,
+          "stock": 1,
+          "categoryId": "6297",
+          "imageUrl": "",
+          "id": "c884",
+          "category": "კატა"
+        }
+      ],
+      "id": "c884"
+    }
+  ],
+  "categories": [
+    {
+      "title": "ქათამი",
+      "description": "კვერცხს არ დებს",
+      "id": "3805"
+    },
+    {
+      "title": "კატა",
+      "description": "იფხაჭნება და იყეფება",
+      "id": "6297"
+    },
+    {
+      "title": "ძაღლი",
+      "description": "ცოტა მოდებილოა\n",
+      "id": "c99b"
+    },
+    {
+      "title": "ძროხა",
+      "description": "აღარ იწველება, გაშრა მშობიარობის შემდეგ",
+      "id": "65a4"
+    },
+    {
+      "title": "თუთიყუში",
+      "description": "ჭორიკანაა და ვერ დაფრინავს",
+      "id": "e0de"
+    },
+    {
+      "id": "da6c",
+      "title": "ძაღლი",
+      "description": "მეგობრული და საყვარელი"
+    }
+  ],
+  "animals_with_categories": [
+    {
+      "id": "e2ee",
+      "animal_id": "1df3",
+      "category_id": "c801"
+    },
+    {
+      "id": "f0fd",
+      "animal_id": "0999",
+      "category_id": "c801"
+    },
+    {
+      "id": "ee3f",
+      "animal_id": "b4d2",
+      "category_id": 0
+    },
+    {
+      "id": "6d54",
+      "animal_id": "a890",
+      "category_id": "6de6"
+    },
+    {
+      "id": "bd08",
+      "animal_id": "c7bc",
+      "category_id": 0
+    },
+    {
+      "id": "57d3",
+      "animal_id": "52ed",
+      "category_id": 0
+    },
+    {
+      "id": "f7fe",
+      "animal_id": "0786",
+      "category_id": 0
+    },
+    {
+      "id": "9398",
+      "animal_id": "7325",
+      "category_id": 0
+    },
+    {
+      "id": "4c83",
+      "animal_id": "de65",
+      "category_id": 0
+    },
+    {
+      "id": "823c",
+      "animal_id": "0c79",
+      "category_id": "ff1f"
+    },
+    {
+      "id": "4a9a",
+      "animal_id": "9253",
+      "category_id": "e3b6"
+    },
+    {
+      "id": "8670",
+      "animal_id": "23e7",
+      "category_id": "5947"
+    },
+    {
+      "id": "e51f",
+      "animal_id": "a73e",
+      "category_id": "d218"
+    },
+    {
+      "id": "c824",
+      "animal_id": "13d8",
+      "category_id": "d218"
+    },
+    {
+      "id": "bb13",
+      "animal_id": "9c9c",
+      "category_id": "d218"
+    },
+    {
+      "id": "5985",
+      "animal_id": "6f6c",
+      "category_id": "d218"
+    },
+    {
+      "id": "3dcb",
+      "animal_id": "b5f5",
+      "category_id": "ff1f"
+    },
+    {
+      "id": "e8f1",
+      "animal_id": "a30b",
+      "category_id": "d218"
+    },
+    {
+      "id": "7cc2",
+      "animal_id": "d19a",
+      "category_id": "d218"
+    },
+    {
+      "id": "03d9",
+      "animal_id": "9284",
+      "category_id": "d218"
+    },
+    {
+      "id": "ea46",
+      "animal_id": "f4de",
+      "category_id": 0
+    },
+    {
+      "id": "5763",
+      "animal_id": "3777",
+      "category_id": "d218"
+    },
+    {
+      "id": "8eb3",
+      "animal_id": "d0aa",
+      "category_id": "d218"
+    },
+    {
+      "id": "f529",
+      "animal_id": "a539",
+      "category_id": "d218"
+    },
+    {
+      "id": "3997",
+      "animal_id": "aa35",
+      "category_id": 0
+    },
+    {
+      "id": "3833",
+      "animal_id": "8ce8",
+      "category_id": "c99b"
+    },
+    {
+      "id": "3eaf",
+      "animal_id": "7652",
+      "category_id": "c99b"
+    },
+    {
+      "id": "3231",
+      "animal_id": "b9de",
+      "category_id": "c99b"
+    },
+    {
+      "id": "a87f",
+      "animal_id": "c5b1",
+      "category_id": "c99b"
+    },
+    {
+      "id": "8608",
+      "animal_id": "e468",
+      "category_id": "c99b"
+    },
+    {
+      "id": "6265",
+      "animal_id": "8e52",
+      "category_id": "3805"
+    },
+    {
+      "id": "c428",
+      "animal_id": "935d",
+      "category_id": "c99b"
+    },
+    {
+      "id": "e5de",
+      "animal_id": "9098",
+      "category_id": "6297"
+    },
+    {
+      "id": "770b",
+      "animal_id": "f94c",
+      "category_id": "da6c"
+    },
+    {
+      "id": "acf7",
+      "animal_id": "db3c",
+      "category_id": "e0de"
+    },
+    {
+      "id": "061c",
+      "animal_id": "42f1",
+      "category_id": "65a4"
+    },
+    {
+      "id": "7b82",
+      "animal_id": "ec60",
+      "category_id": "3805"
+    },
+    {
+      "id": "07d3",
+      "animal_id": "5b6c",
+      "category_id": "6297"
+    },
+    {
+      "id": "628b",
+      "animal_id": "594d",
+      "category_id": "c99b"
+    },
+    {
+      "id": "6087",
+      "animal_id": "951e",
+      "category_id": "6297"
+    },
+    {
+      "id": "63c0",
+      "animal_id": "8b22",
+      "category_id": "da6c"
+    },
+    {
+      "id": "336a",
+      "animal_id": "c884",
+      "category_id": "6297"
+    }
+  ]
+}
