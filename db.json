@@ -9,10 +9,10 @@
           "description": "ძალაინ საყვარელი და მეგობრული",
           "isPopular": true,
           "stock": 1,
-          "categoryId": "da6c",
+          "categoryId": "c99b",
           "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
           "id": "f94c",
-          "category": "ძაღლი"
+          "category": "ძაღლი (ლაბრა)"
         }
       ],
       "id": "f94c"
@@ -51,39 +51,40 @@
       "id": "42f1"
     },
     {
-      "id": "ec60",
       "data": [
         {
           "name": "ქისო",
           "priceUSD": 50,
           "priceGEL": 136.38,
-          "description": "კაკანებს, მაგრამ კვერცხს არ დებს",
+          "description": "კაკანებს, მაგრამ კვერცხს არ დებს.",
           "isPopular": true,
           "stock": 1,
           "categoryId": "3805",
           "imageUrl": "https://chandler.on.ge/2024/04/30/ChickenFaceCloseUpFrontOnRedCrest.jpg",
+          "id": "ec60",
           "category": "ქათამი"
         }
-      ]
+      ],
+      "id": "ec60"
     },
     {
-      "id": "5b6c",
       "data": [
         {
           "name": "ფისო",
           "priceUSD": 20,
           "priceGEL": 54.55,
-          "description": "იფხაჭნებიან",
+          "description": "პატარაა, მაგრამ მარად იფხაჭნება",
           "isPopular": false,
           "stock": 3,
           "categoryId": "6297",
           "imageUrl": "https://rogor.ge/media/articles/26__rogor-gadavachviot-kata-dakawvras.jpg",
+          "id": "5b6c",
           "category": "კატა"
         }
-      ]
+      ],
+      "id": "5b6c"
     },
     {
-      "id": "594d",
       "data": [
         {
           "name": "ჩუნგო",
@@ -94,9 +95,11 @@
           "stock": 1,
           "categoryId": "c99b",
           "imageUrl": "https://cdnn1.img.sputnik-georgia.com/img/23400/45/234004523_0:27:1867:1083_2072x0_60_0_0_5bb99a5de07898672eb0dcd7d945b440.jpg",
-          "category": "ძაღლი"
+          "id": "594d",
+          "category": "ძაღლი (ლაბრადორი)"
         }
-      ]
+      ],
+      "id": "594d"
     },
     {
       "data": [
@@ -110,16 +113,49 @@
           "categoryId": "c99b",
           "imageUrl": "https://www.akc.org/wp-content/uploads/2017/11/Golden-Retriever-Puppy.jpg",
           "id": "c884",
-          "category": "ძაღლი"
+          "category": "ძაღლი (ლაბრა)"
         }
       ],
       "id": "c884"
+    },
+    {
+      "data": [
+        {
+          "name": "ჩიპი",
+          "priceUSD": 60,
+          "priceGEL": 163.61,
+          "description": "პატარაა, კბილები არ აქვს",
+          "isPopular": true,
+          "stock": 1,
+          "categoryId": "d0da",
+          "imageUrl": "https://mix.metronome.ge/wp-content/uploads/2023/06/a89654_big.png",
+          "id": "23c3",
+          "category": "ციყვი"
+        }
+      ],
+      "id": "23c3"
+    },
+    {
+      "id": "1b8e",
+      "data": [
+        {
+          "name": "ძაღლები",
+          "priceUSD": 0,
+          "priceGEL": 0,
+          "description": "",
+          "isPopular": false,
+          "stock": 0,
+          "categoryId": "c99b",
+          "imageUrl": "",
+          "category": "ძაღლი (ლაბრა)"
+        }
+      ]
     }
   ],
   "categories": [
     {
       "title": "ქათამი",
-      "description": "კვერცხს არ დებს ცოცხალი თავით",
+      "description": "დაბერდა და კვერცხს არ დებს ცოცხალი თავით.",
       "id": "3805"
     },
     {
@@ -128,7 +164,7 @@
       "id": "6297"
     },
     {
-      "title": "ძაღლი",
+      "title": "ძაღლი (ლაბრა)",
       "description": "ცოტა მოდებილოა\n",
       "id": "c99b"
     },
@@ -143,9 +179,14 @@
       "id": "e0de"
     },
     {
-      "id": "da6c",
-      "title": "ძაღლი",
-      "description": "მეგობრული და საყვარელი"
+      "title": "ძაღლი(ბულდოგი)",
+      "description": "მეგობრული და საყვარელი",
+      "id": "da6c"
+    },
+    {
+      "id": "d0da",
+      "title": "ციყვი",
+      "description": "ჯერ პატარაა და კბილები არ აქვს"
     }
   ],
   "animals_with_categories": [
@@ -358,6 +399,16 @@
       "id": "336a",
       "animal_id": "c884",
       "category_id": "6297"
+    },
+    {
+      "id": "ccf7",
+      "animal_id": "f549",
+      "category_id": "3805"
+    },
+    {
+      "id": "6242",
+      "animal_id": "1b8e",
+      "category_id": "c99b"
     }
   ]
 }

@@ -17,7 +17,6 @@ export const Card = styled.div`
   }
 `;
 
-
 export const ImageWrapper = styled.div`
   background-color: #f2f6fb;
   border-radius: 8px;
@@ -51,7 +50,6 @@ export const Badge = styled.span`
   width: fit-content;
   margin: 10px 0 10px;
 `;
-
 
 export const PriceRow = styled.div`
   display: flex;
@@ -97,7 +95,7 @@ export const ButtonGroup = styled.div`
   gap: 12px;
 `;
 
-export const Button = styled.button<{ $danger?: boolean }>`
+export const Button = styled.button<{ $colorProps?: boolean }>`
   flex: 1;
   padding: 10px 0;
   border: none;
@@ -105,7 +103,7 @@ export const Button = styled.button<{ $danger?: boolean }>`
   font-weight: 500;
   cursor: pointer;
   color: white;
-  background-color: ${(props) => (props.$danger ? "#e74c3c" : "#3498db")};
+  background-color: ${(props) => (props.$colorProps ? "#e74c3c" : "#3498db")};
 
   &:hover {
     opacity: 0.9;

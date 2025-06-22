@@ -19,14 +19,16 @@ import {
   SaveButton,
   CancelButton,
 } from "../components/styles/AdminAddPetPage.styled";
+import type { ValuteResponseItem } from "../interfaces/Animal";
 
 const AdminAddPetPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { id } = useParams<{ id?: string }>();
+  const { id } = useParams<{ id: string }>();
   const isEditMode = Boolean(id);
 
   const { categories } = useAppSelector((state) => state.category);
+  //თუ ID არსებობს, მაშინ ვეძებთ არსებულ ცხოველს
   const existingAnimal = useAppSelector((state) =>
     state.animal.animals.find((a) => a.id === id)
   );
@@ -42,12 +44,14 @@ const AdminAddPetPage: React.FC = () => {
     imageUrl: "",
   });
 
+  //კატეგორიების ჩამოტვირთვა
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
 
   useEffect(() => {
     if (isEditMode && existingAnimal) {
+      // ID არ გვინდა რომ იყოს ფორმის მონაცემებში
       const { id: _, ...data } = existingAnimal;
       setFormData({
         name: data.name || "",
@@ -63,27 +67,25 @@ const AdminAddPetPage: React.FC = () => {
   }, [isEditMode, existingAnimal]);
 
   //კურსის გამოთვლა
-  const [exchangeRate, setExchangeRate] = useState<number | null>(null);
+  const [exchange, setExchange] = useState<number | null>(null);
 
   useEffect(() => {
-    const fetchExchangeRate = async () => {
+    const fetchExchange = async () => {
       try {
         const res = await fetch(
           "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/ka/json"
         );
-        const data = await res.json();
-        const usdRate = data[0].currencies.find(
-          (c: any) => c.code === "USD"
-        )?.rate;
+        const data = (await res.json()) as ValuteResponseItem[];
+        const usdRate = data[0].currencies.find((c) => c.code === "USD")?.rate;
         if (usdRate) {
-          setExchangeRate(usdRate);
+          setExchange(usdRate);
         }
       } catch (err) {
         console.error("Failed to fetch exchange rate", err);
       }
     };
 
-    fetchExchangeRate();
+    fetchExchange();
   }, []);
 
   const handleChange = (
@@ -93,18 +95,21 @@ const AdminAddPetPage: React.FC = () => {
   ) => {
     const { name, value, type, checked } = e.target as HTMLInputElement;
 
-    const parsedValue =
+    //თუ ტიპი არის checkbox > checked, number > რიცხვად, text ან textarea > სტრნგი
+    const AnalyzedValue =
       type === "checkbox" ? checked : type === "number" ? Number(value) : value;
 
-    if (name === "priceUSD" && exchangeRate) {
-      const gel = Number(value) * exchangeRate;
+    // თუ USD შევცვალე მაშინ ვანგარიშობთ GEL ვალუტის ფასს
+    if (name === "priceUSD" && exchange) {
+      const gel = Number(value) * exchange;
       setFormData((prev) => ({
         ...prev,
         priceUSD: Number(value),
         priceGEL: Number(gel.toFixed(2)),
       }));
-    } else if (name === "priceGEL" && exchangeRate) {
-      const usd = Number(value) / exchangeRate;
+      // თუ GEL შევცვალე მაშინ ვანგარიშობთ USD ვალუტის ფასს
+    } else if (name === "priceGEL" && exchange) {
+      const usd = Number(value) / exchange;
       setFormData((prev) => ({
         ...prev,
         priceGEL: Number(value),
@@ -113,7 +118,8 @@ const AdminAddPetPage: React.FC = () => {
     } else {
       setFormData((prev) => ({
         ...prev,
-        [name]: parsedValue,
+        // დინამიური სახელის გამოყენება
+        [name]: AnalyzedValue,
       }));
     }
   };
@@ -121,24 +127,17 @@ const AdminAddPetPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const selectedCategory = categories.find(
-        (cat) => cat.id === formData.categoryId
-      );
-      const categoryTitle = selectedCategory?.title || "";
-
       if (isEditMode && id) {
         await dispatch(
           updateAnimal({
             ...formData,
             id,
-            category: categoryTitle,
           })
         ).unwrap();
       } else {
         const result = await dispatch(
           addAnimal({
             ...formData,
-            category: categoryTitle,
           })
         ).unwrap();
 
@@ -157,14 +156,13 @@ const AdminAddPetPage: React.FC = () => {
   };
 
   function isValidUrl(url: string): boolean {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
   }
-}
-
 
   return (
     <Container>

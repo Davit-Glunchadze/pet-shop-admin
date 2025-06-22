@@ -1,6 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { Content, Header, NavBar, StyledLink } from "./styles/AdminNavbar.styled";
-
+import {
+  Content,
+  Header,
+  NavBar,
+  StyledLink,
+} from "./styles/AdminNavbar.styled";
 
 const AdminNavbar = () => {
   return (

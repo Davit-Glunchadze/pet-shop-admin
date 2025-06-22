@@ -18,7 +18,9 @@ import {
 const AdminAddCategoryPage: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { id } = useParams<Record<string, string>>();
+  //კატეგორიის ID-ს ვიღებთ URL-დან
+  const { id } = useParams<{ id: string }>();
+  //თუ ID არსებობს, მაშინ ეს არის რედაქტირების რეჟიმი
   const isEditMode = Boolean(id);
 
   const { categories } = useAppSelector((state) => state.category);
@@ -40,6 +42,7 @@ const AdminAddCategoryPage: React.FC = () => {
     }
   }, [id, categories]);
 
+  //ცვლილების დამუშავება
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -47,13 +50,16 @@ const AdminAddCategoryPage: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  //ფორმის გაგზავნის დამუშავება
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       if (isEditMode && id) {
+        // კატეგორიის განახლება
         console.log("Updating with ID:", id);
         await dispatch(updateCategory({ id, updatedData: formData })).unwrap(); 
       } else {
+        // ახალი კატეგორიის დამატება
         await dispatch(addCategory(formData)).unwrap();
       }
       navigate("/categories");

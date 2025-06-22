@@ -28,14 +28,14 @@ export const fetchAnimals = createAsyncThunk<AnimalItem[]>(
     });
     if (!response.ok) throw new Error("Failed to fetch animals");
 
-    const raw = await response.json();
+    const hardObject = (await response.json()) as ApiResponseItem[];
 
-    const normalized = raw.map((item: ApiResponseItem) => ({
+    const normal = hardObject.map((item) => ({
       ...item.data?.[0], // animal data
       id: item.id, // აიდის მინიჭება
     }));
 
-    return normalized;
+    return normal;
   }
 );
 
@@ -78,7 +78,7 @@ export const addAnimal = createAsyncThunk<AnimalItem, Omit<AnimalItem, "id">>(
 
     if (!response.ok) throw new Error("Failed to add animal");
 
-    const result = await response.json();
+    const result = (await response.json()) as ApiResponseItem;
 
     return {
       ...result.data?.[0],
@@ -132,6 +132,7 @@ export const animalSlice = createSlice({
 
     builder.addCase(updateAnimal.fulfilled, (state, action) => {
       const index = state.animals.findIndex((a) => a.id === action.payload.id);
+      // თუ ცხოველი არსებობს, განახლდება
       if (index !== -1) {
         state.animals[index] = action.payload;
       }
