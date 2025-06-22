@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import type { CompProps } from "../interfaces/Animal";
 import {
   Card,
   ImageWrapper,
@@ -11,17 +12,17 @@ import {
   ButtonGroup,
   Button,
 } from "./styles/AnimalCard.styled";
-import type { AnimalItem } from "../interfaces/Animal";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { fetchCategories } from "../features/categories/categorySlice";
 
-interface Props {
-  animal: AnimalItem;
-  onEdit: (id: string) => void;
-  onDelete: (id: string) => void;
-  onView: (id: string) => void;
-}
-
-const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete, onView }) => {
+const AnimalCard: React.FC<CompProps> = ({
+  animal,
+  onEdit,
+  onDelete,
+  onView,
+}) => {
   const handleEdit = (e: React.MouseEvent) => {
+    // არ გავრცელდეს click მოვლენა სხვა ელემენტებზე
     e.stopPropagation();
     if (animal.id) {
       onEdit(animal.id);
@@ -29,11 +30,22 @@ const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete, onView }) => {
   };
 
   const handleDelete = (e: React.MouseEvent) => {
+    // არ გავრცელდეს click მოვლენა სხვა ელემენტებზე
     e.stopPropagation();
     if (animal.id) {
       onDelete(animal.id);
     }
   };
+
+  const categories = useAppSelector((state) => state.category.categories);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // თუ კატეგორიები ცარიელია, მაშინ ჩატვირთოს.
+    if (categories.length === 0) {
+      dispatch(fetchCategories());
+    }
+  }, [categories.length, dispatch]);
 
   return (
     <Card onClick={() => onView(animal.id)} style={{ cursor: "pointer" }}>
@@ -46,7 +58,9 @@ const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete, onView }) => {
       </ImageWrapper>
 
       <Title>{animal.name}</Title>
-      <Badge>{animal.category}</Badge>
+      <Badge>
+        {categories.find((c) => c.id === animal.categoryId)?.title || "Uncategorized"}
+      </Badge>
 
       <PriceRow>
         <span>${animal.priceUSD}</span>
@@ -68,7 +82,7 @@ const AnimalCard: React.FC<Props> = ({ animal, onEdit, onDelete, onView }) => {
 
       <ButtonGroup>
         <Button onClick={handleEdit}>Edit</Button>
-        <Button $danger onClick={handleDelete}>
+        <Button $colorProps onClick={handleDelete}>
           Delete
         </Button>
       </ButtonGroup>

@@ -14,17 +14,29 @@ import {
   TextWrapper,
 } from "../components/styles/PetDetailsPage.styled";
 import { BackButton } from "../components/styles/AdminAddPetPage.styled";
+import { useEffect } from "react";
+import { fetchCategories } from "../features/categories/categorySlice";
 
 const PetDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
+  //შემოწმება ცხოველის დეტალური გვერდისთვის
   const pet = useAppSelector((state) =>
     state.animal.animals.find((a) => a.id === id)
   );
 
   if (!pet) return <p style={{ textAlign: "center" }}>Pet not found.</p>;
+
+  // კატეგორიების ჩატვირთვა
+    const categories = useAppSelector((state) => state.category.categories);
+    useEffect(() => {
+      // თუ კატეგორიები ცარიელია, მაშინ ჩატვირთოს.
+      if (categories.length === 0) {
+        dispatch(fetchCategories());
+      }
+    }, [categories.length, dispatch]);
 
   return (
     <Maindiv>
@@ -35,13 +47,13 @@ const PetDetailsPage = () => {
             {pet.imageUrl ? (
               <img src={pet.imageUrl} alt={pet.name} />
             ) : (
-              <span style={{ fontSize: "4rem" }}>🐾</span>
+              <span style={{ fontSize: "64px" }}>🐾</span>
             )}
           </ImageWrapper>
           <TextWrapper>
             <Title>{pet.name}</Title>
-            <div style={{ marginBottom: "1rem" }}>
-              <Badge>{pet.category}</Badge>
+            <div style={{ marginBottom: "16px" }}>
+              <Badge>{categories.find((c) => c.id === pet.categoryId)?.title || "Uncategorized"}</Badge>
             </div>
 
             <PriceBox>
@@ -60,7 +72,7 @@ const PetDetailsPage = () => {
             </PriceBox>
 
             {pet.isPopular && (
-              <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+              <div style={{ textAlign: "center", marginBottom: "16px" }}>
                 <span
                   style={{
                     background: "#FEEBC8",
