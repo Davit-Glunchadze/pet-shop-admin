@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { deleteAnimal, fetchAnimals } from "../features/animals/animalsSlice";
 import AnimalCard from "../components/AnimalCard";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   AddButton,
   Header,
@@ -10,8 +10,10 @@ import {
   Title,
 } from "../components/styles/AdminCategoriesPage.styled";
 import { Animalcards } from "../components/styles/AdminPetspage.styled";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const AdminPetsPage = () => {
+  console.log("🌀 AdminPetsPage RENDERED");
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { animals, loading, error } = useAppSelector((state) => state.animal);
@@ -20,19 +22,18 @@ const AdminPetsPage = () => {
     dispatch(fetchAnimals());
   }, [dispatch]);
 
-  useEffect(() => {
-  console.log("Loaded animals:", animals);
-}, [animals]);
+  //   useEffect(() => {
+  //   console.log("Loaded animals:", animals);
+  // }, [animals]);
 
   return (
     <PageContainer>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-
       <Header>
         <Title>All Pets</Title>
         <AddButton onClick={() => navigate("/Add")}>➕ Add New Pet</AddButton>
       </Header>
+      {loading && <LoadingSpinner />}
+      {error && <p style={{ color: "red" }}>{error}</p>}
       <Animalcards>
         {animals.map((animal) => (
           <AnimalCard

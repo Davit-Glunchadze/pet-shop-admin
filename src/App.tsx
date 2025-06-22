@@ -9,15 +9,16 @@ import PetDetailsPage from "./pages/PetDetailsPage";
 const App = () => {
   return (
     <Router>
-      <AdminNavbar />
       <Routes>
-        <Route path="/" element={<AdminPetsPage />} />
-        <Route path="/add" element={<AdminAddPetPage />} />
-        <Route path="/add-pet/:id" element={<AdminAddPetPage />} />
-        <Route path="/pets/:id" element={<PetDetailsPage />} />
-        <Route path="/categories" element={<AdminCategoriesPage />} />
-        <Route path="/add-category" element={<AdminAddCategoryPage />} />
-        <Route path="/add-category/:id" element={<AdminAddCategoryPage />} />
+        <Route path="/" element={<AdminNavbar />}>
+          <Route index element={<AdminPetsPage />} />
+          <Route path="add" element={<AdminAddPetPage />} />
+          <Route path="add-pet/:id" element={<AdminAddPetPage />} />
+          <Route path="pets/:id" element={<PetDetailsPage />} />
+          <Route path="categories" element={<AdminCategoriesPage />} />
+          <Route path="add-category" element={<AdminAddCategoryPage />} />
+          <Route path="add-category/:id" element={<AdminAddCategoryPage />} />
+        </Route>
       </Routes>
     </Router>
   );
